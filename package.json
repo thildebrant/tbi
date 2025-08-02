@@ -1,0 +1,25 @@
+{
+  "name": "tbi-lesion-analysis-pipeline",
+  "version": "1.0.0",
+  "description": "A deep learning-based pipeline for analyzing traumatic brain injury (TBI) lesions from MRI scans",
+  "main": "run_pipeline.py",
+  "scripts": {
+    "test": "pytest tests/",
+    "format": "black .",
+    "lint": "flake8 src/",
+    "type-check": "mypy src/",
+    "install": "pip install -r requirements.txt"
+  },
+  "keywords": [
+    "medical-imaging",
+    "mri",
+    "tbi",
+    "deep-learning",
+    "segmentation",
+    "neuroscience",
+    "brain-injury"
+  ],
+  "author": "TBI Lesion Analysis Pipeline Contributors",
+  "license": "MIT",
+  "type": "commonjs"
+}

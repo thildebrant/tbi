@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Test coverage
+coverage/
+.nyc_output/
+.pytest_cache/
+htmlcov/
+
+# Medical imaging data (large files)
+*.nii
+*.nii.gz
+*.dcm
+*.dicom
+*.h5
+*.hdf5
+
+# Model files (large)
+*.pth
+*.pt
+*.pkl
+*.pickle
+*.joblib
+
+# Output directories
+data/output/
+data/input/
+models/brain_segmentation/*.pth
+models/brain_segmentation/*.nii.gz
+models/brain_segmentation/*.json
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Documentation builds
+docs/_build/
+site/
