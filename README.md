@@ -1,6 +1,11 @@
 # TBI Lesion Analysis Pipeline
 
-A deep learning-based pipeline for analyzing traumatic brain injury (TBI) lesions from MRI scans. This tool segments 7 types of TBI lesions and quantifies their overlap with 10 brain anatomical zones.
+A deep learning-based pipeline for analyzing traumatic brain injury (TBI) lesions from MRI scans. This tool segments 7 types of TBI lesions and quantifies their overlap with 10 brain anatomical zones. This was a proof of concept using Claude Code, where I found interesting Computed Tomography based Traumatic Brain Injury Quantification python code at https://github.com/nifm-gin/CT-TIQUA.
+I then modified the code to use MRI DICOM images, and trained using MR Brain Segmentation Challenge 2018 Data. Finally, I ran inference on some existing MRI images from a TRACTS study.
+
+Next steps would be to make the inference and validation more rigourous and begin an investigation on the lesions identified.
+The sample reports are in the output folder.
+ 
 
 ## Features
 
@@ -161,7 +166,17 @@ train_transforms = segmenter.create_training_transforms()
 
 ## Citation
 
-This pipeline adapts concepts from CT-TIQUA for MRI-based TBI analysis.
+- This pipeline adapts concepts and code from CT-TIQUA for MRI-based TBI analysis. Source is https://github.com/nifm-gin/CT-TIQUA 
+- Labled training data from https://dataverse.nl/dataset.xhtml?persistentId=doi:10.34894/E0U32Q with full reference:
+@data{E0U32Q_2024,
+author = {Hugo J. Kuijf and Edwin Bennink and Koen L. Vincken and Nick Weaver and Geert Jan Biessels and Max A. Viergever},
+publisher = {DataverseNL},
+title = {{MR Brain Segmentation Challenge 2018 Data}},
+year = {2024},
+version = {V1},
+doi = {10.34894/E0U32Q},
+url = {https://doi.org/10.34894/E0U32Q}
+}
 
 ## License
 
