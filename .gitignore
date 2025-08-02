@@ -45,9 +45,9 @@ htmlcov/
 *.h5
 *.hdf5
 
-# Model files (large)
-*.pth
-*.pt
+# Model files (large) - now handled by Git LFS
+# *.pth - tracked by Git LFS
+# *.pt - tracked by Git LFS
 *.pkl
 *.pickle
 *.joblib
@@ -55,7 +55,7 @@ htmlcov/
 # Output directories
 data/output/
 data/input/
-models/brain_segmentation/*.pth
+# models/brain_segmentation/*.pth - now tracked by Git LFS
 models/brain_segmentation/*.nii.gz
 models/brain_segmentation/*.json
 

@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brain Segmentation Report - Sample 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .summary-box {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .pathology-box {
+            background-color: #66bb6a;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            margin: 10px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .stat-card {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #4CAF50;
+        }
+        .structure-bar {
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 5px 0;
+        }
+        .structure-fill {
+            height: 20px;
+            background-color: #4CAF50;
+            transition: width 0.3s ease;
+        }
+        .metadata {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 12px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Brain Segmentation Analysis Report</h1>
+        <h2>fTRACTS Sample: Sample 2</h2>
+        <p><strong>Analysis Date:</strong> 2025-07-25 15:24:05</p>
+        <p><strong>Input File:</strong> <code>data/input/sample2/fTRACTS_07302024-0008-00001-000001-01.nii</code></p>
+        
+        <div class="pathology-box">
+            <h3>Pathology Assessment: Minimal</h3>
+            <p>White Matter Lesion Volume: 0.55 ml</p>
+        </div>
+        
+        <div class="summary-box">
+            <h3>Summary Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Total Brain Volume</h4>
+                    <p>2752424 mm³ (2752.4 ml)</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Segmented Structures</h4>
+                    <p>8 brain regions</p>
+                </div>
+                <div class="stat-card">
+                    <h4>WM Lesions</h4>
+                    <p>0.55 ml (0.02%)</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Analysis Method</h4>
+                    <p>3D U-Net Deep Learning</p>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Detailed Brain Structure Analysis</h3>
+        <table>
+            <tr>
+                <th>Brain Structure</th>
+                <th>Volume (mm³)</th>
+                <th>Volume (ml)</th>
+                <th>Percentage</th>
+                <th>Distribution</th>
+            </tr>
+            <tr>
+                <td>Brain stem</td>
+                <td>1038424</td>
+                <td>1038.42</td>
+                <td>37.7%</td>
+                <td>
+                    <div class="structure-bar">
+                        <div class="structure-fill" style="width: 75.455235094593%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Cerebrospinal fluid in the extracerebral space</td>
+                <td>731992</td>
+                <td>731.99</td>
+                <td>26.6%</td>
+                <td>
+                    <div class="structure-bar">
+                        <div class="structure-fill" style="width: 53.188898222076254%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Basal ganglia</td>
+                <td>598016</td>
+                <td>598.02</td>
+                <td>21.7%</td>
+                <td>
+                    <div class="structure-bar">
+                        <div class="structure-fill" style="width: 43.45377020400927%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td>215256</td>
+                <td>215.26</td>
+                <td>7.8%</td>
+                <td>
+                    <div class="structure-bar">
+                        <div class="structure-fill" style="width: 15.641194815914991%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Cortical gray matter</td>
+                <td>153296</td>
+                <td>153.30</td>
+                <td>5.6%</td>
+                <td>
+                    <div class="structure-bar">
+                        <div class="structure-fill" style="width: 11.138981494130265%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Cerebellum</td>
+                <td>12824</td>
+                <td>12.82</td>
+                <td>0.5%</td>
+                <td>
+                    <div class="structure-bar">
+                        <div class="structure-fill" style="width: 0.9318331768651923%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>White matter</td>
+                <td>2064</td>
+                <td>2.06</td>
+                <td>0.1%</td>
+                <td>
+                    <div class="structure-bar">
+                        <div class="structure-fill" style="width: 0.1499768930949592%"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>White matter lesions</td>
+                <td>552</td>
+                <td>0.55</td>
+                <td>0.0%</td>
+                <td>
+                    <div class="structure-bar">
+                        <div class="structure-fill" style="width: 0.040110099316093745%"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <h3>Clinical Significance</h3>
+        <div class="summary-box">
+            <h4>✓ Minimal Pathological Findings</h4>
+            <ul>
+                <li>Low white matter lesion burden</li>
+                <li>Brain structure appears largely normal</li>
+                <li>No significant pathological indicators detected</li>
+            </ul><li>Reduced cortical gray matter volume noted</li>
+        </div>
+        
+        <h3>Visualization</h3>
+        <div class="image-container">
+            <div>
+                <h4>Sample Comparison</h4>
+                <img src="../visualizations/fTRACTS_sample_comparison.png" alt="Sample Comparison">
+            </div>
+            <div>
+                <h4>Volume Analysis</h4>
+                <img src="../visualizations/fTRACTS_volume_analysis.png" alt="Volume Analysis">
+            </div>
+        </div>
+        
+        <h3>Technical Details</h3>
+        <div class="metadata">
+            <strong>Model Information:</strong><br>
+            Architecture: 3D U-Net<br>
+            Input Channels: Single-channel MRI (adapted from T1+FLAIR training)<br>
+            Output Classes: 11 brain tissue types<br>
+            Training Data: MR Brain Segmentation Challenge 2018<br>
+            Validation Loss: 0.6925 (Dice coefficient)<br><br>
+            
+            <strong>Processing Details:</strong><br>
+            Original Image Size: 104×104×72 voxels<br>
+            Processing Size: 128×128×64 voxels (resized)<br>
+            Voxel Spacing: Variable based on acquisition<br>
+            Normalization: Percentile-based (1st-99th percentile)<br><br>
+            
+            <strong>Output Files:</strong><br>
+            Segmentation: <code>{sample_info['seg_path']}</code><br>
+            Statistics: <code>{sample_info['stats_path']}</code><br>
+        </div>
+        
+        <h3>Methodology & Limitations</h3>
+        <div class="summary-box">
+            <h4>Analysis Method</h4>
+            <ul>
+                <li>Deep learning-based brain segmentation using 3D U-Net</li>
+                <li>Trained on multi-modal MRI data (T1-weighted + FLAIR)</li>
+                <li>Adapted for single-channel fTRACTS data</li>
+                <li>Automated tissue classification into 11 anatomical regions</li>
+            </ul>
+            
+            <h4>Important Limitations</h4>
+            <ul>
+                <li>Model trained on different imaging protocol than fTRACTS</li>
+                <li>Results should be validated by experienced neuroradiologist</li>
+                <li>Segmentation accuracy may vary with image quality</li>
+                <li>Clinical correlation always required for diagnosis</li>
+            </ul>
+        </div>
+        
+        <p style="text-align: center; margin-top: 30px; font-size: 12px; color: #666;">
+            Generated by TBI Analysis Pipeline - 
+            🤖 <a href="https://claude.ai/code">Claude Code</a> | 
+            Report Date: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+        </p>
+    </div>
+</body>
+</html>
